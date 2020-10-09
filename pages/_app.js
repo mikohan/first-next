@@ -5,11 +5,11 @@ import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Container>
+    <React.Fragment>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-    </Container>
+    </React.Fragment>
   );
 }
 

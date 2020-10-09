@@ -1,5 +1,7 @@
 import { postsUrl } from '../config';
 import axios from 'axios';
+import Link from 'next/link';
+import Posts from './posts';
 
 export default function Home({ posts, result }) {
   return (
@@ -10,7 +12,9 @@ export default function Home({ posts, result }) {
       </h1>
       <ul>
         {result.map((post) => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>
+            <Link href={`/post/${post.id}`}>{post.title}</Link>
+          </li>
         ))}
       </ul>
     </div>

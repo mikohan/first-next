@@ -6,7 +6,7 @@ export default function Home({ posts, result }) {
     <div>
       <h1>
         First Next application Change:
-        <span style={{ color: 'blue' }}>{posts || null}</span>
+        <span style={{ color: 'blue' }}>{posts}</span>
       </h1>
       <ul>
         {result.map((post) => (
@@ -20,6 +20,7 @@ export default function Home({ posts, result }) {
 Home.getInitialProps = async (ctx) => {
   const res = await axios.get(postsUrl);
   const { data } = res;
+  const ten = data.slice(0, 10);
 
-  return { name: 'My Posts', result: data };
+  return { name: 'My Posts', result: ten };
 };

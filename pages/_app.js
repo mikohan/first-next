@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Navbar />
-      <div style={{ height: '100vh' }}>
+      <div style={{ height: '100vh', overflowY: 'scroll' }}>
         <Component {...pageProps} />
       </div>
       <Footer />

@@ -13,7 +13,7 @@ export default function Home({ posts, result }) {
       <ul>
         {result.map((post) => (
           <li key={post.id}>
-            <Link href={`/post/${post.id}`}>{post.title}</Link>
+            <Link href={`/posts/${post.id}`}>{post.title}</Link>
           </li>
         ))}
       </ul>

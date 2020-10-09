@@ -7,7 +7,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Navbar />
-      <Component {...pageProps} />
+      <div style={{ height: '100vh' }}>
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </React.Fragment>
   );

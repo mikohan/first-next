@@ -6,7 +6,6 @@ export default class About extends Component {
     super();
   }
   static async getInitialProps({ req, query }) {
-    await console.log('FETCHING dATA');
     return await { data: 'MY BEAUTEFULL DATA' };
   }
   render() {

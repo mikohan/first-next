@@ -29,6 +29,7 @@ Posts.getInitialProps = async ({ query }) => {
   const res = await Axios.get(`${commentsUrl}${query.postId}`);
   const { data } = res;
   const post = await getPost(query.postId);
+  console.log(post);
 
   return { post: post, comments: data };
 };

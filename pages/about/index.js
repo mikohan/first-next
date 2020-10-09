@@ -6,13 +6,13 @@ export default class About extends Component {
     super();
   }
   static async getInitialProps({ req, query }) {
-    await console.log('FETCHING dATA', req);
-    return await { req };
+    await console.log('FETCHING dATA');
+    return await { data: 'MY BEAUTEFULL DATA' };
   }
   render() {
     return (
       <div>
-        <h1>About Page</h1>
+        <h1>About Page {this.props.data}</h1>
         <Link href="/">
           <button>Go Home</button>
         </Link>
